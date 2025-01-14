@@ -50,7 +50,7 @@ const cart = [
     },
     {
         item: 'Wireless Earbuds',
-        quanity: 1,
+        quantity: 1,
         price: 39.99,
         category: 'Electronics',
         reviews: [
