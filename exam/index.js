@@ -10,10 +10,18 @@ function logItems(array){
 
 // Problem #3 //
 function getStrings(array){
-    return array.map(item => {
-        const cost = item.price * item.quantity;
-        return `${item.item} - Total cost: ${cost}`;
-    });
+    
 }
 
-console.log(getStrings(cart));
+// Problem #4 //
+function getTotalByCategory(array, category, total=0){
+    if (array.length === 0){
+        return total;
+    }
+    if (array[0].category === category){
+        total += array[0].quantity;
+    }
+    return getTotalByCategory(array.slice(1), category, total);
+}
+
+console.log(getTotalByCategory(cart, 'Grocery'));

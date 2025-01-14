@@ -75,5 +75,24 @@ describe('BC Tutoring Exam', function(){
         });
     });
 
+    describe("getTotalByCategory()", function(){
+        it('should return a number', function(){
+            assert.equal(typeof getTotalByCategory(cart, 'Grocery'), 'number');
+        });
+        it('should return a correct total for items based on the category', function(){
+            const result = getTotalByCategory(cart, 'Grocery');
+            assert.equal(result, 4);
+        });
+        it('should use recursion', function(){
+            const func = sinon.spy(window, 'getTotalByCategory');
+            try {
+                func(cart, 'Grocery');
+                assert.isAbove(func.callCount, 1);
+            } finally {
+                func.restore();
+            }
+        });
+    });
+
 
 });

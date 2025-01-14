@@ -24,3 +24,5 @@ RETURNS =>
 ]
 */
 ```
+4. Create a function called `getTotalByCategory` that takes in two parameters - `array` & `category`; `array` represents an array of items like the one shown in data.js; `category` represents a string of the item's category. This function should use recursion to return the total number of items in the cart matching that category. Note that the total should take into account the quantity of items bought.
+5. 
