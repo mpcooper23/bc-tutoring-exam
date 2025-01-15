@@ -70,3 +70,9 @@ logLastReview({
 LOGS => 1 star: These didn't work at all! (bjoseph)
 */
 ```
+7. Create a function called `updateObjects` - that takes in two parameters - `array` & `update`; `array` represents an array of items like the own shown in data.js; `update` represents an array with two items: the zero index represents a new key we want to each to each object; the one index represents the value that should be attached to that key. This function should iterate through the input array, and at each iteration it should add the `update` zero index as a new key and the `update` one index as the new value at that key for every object. The function should return the array at the end.
+```javascript
+// example output
+updateObjects(cart, ['returned', false]);
+// After invoking this function, each object should how have a key of `returned` with a value set to `false`
+```

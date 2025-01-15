@@ -24,10 +24,13 @@ function mapReviews(){
 }
 
 // Problem #6 //
-function logLastReview(item){
-    const final = item.reviews[item.reviews.length - 1];
-    return `${final.stars} star: ${final.text} (${final.author.username})`
+function logLastReview(){
+   
 }
 
-console.log(logLastReview(cart[0]));
+// Problem #7 //
+function updateObjects(){
+    
+}
+
 
