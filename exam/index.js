@@ -6,7 +6,7 @@
  use the native filter method to return a new array of only the items that have at least 
  1 one star review in their reviews array.
  */
-
+ 
 
 function filterByOneStarReviews(array){
     return array.filter(product => {
