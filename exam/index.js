@@ -14,14 +14,20 @@ function getStrings(array){
 }
 
 // Problem #4 //
-function getTotalByCategory(array, category, total=0){
-    if (array.length === 0){
-        return total;
-    }
-    if (array[0].category === category){
-        total += array[0].quantity;
-    }
-    return getTotalByCategory(array.slice(1), category, total);
+function getTotalByCategory(){
+    
 }
 
-console.log(getTotalByCategory(cart, 'Grocery'));
+// Problem #5 //
+function mapReviews(){
+    
+}
+
+// Problem #6 //
+function logLastReview(item){
+    const final = item.reviews[item.reviews.length - 1];
+    return `${final.stars} star: ${final.text} (${final.author.username})`
+}
+
+console.log(logLastReview(cart[0]));
+

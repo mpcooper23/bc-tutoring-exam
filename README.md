@@ -25,4 +25,48 @@ RETURNS =>
 */
 ```
 4. Create a function called `getTotalByCategory` that takes in two parameters - `array` & `category`; `array` represents an array of items like the one shown in data.js; `category` represents a string of the item's category. This function should use recursion to return the total number of items in the cart matching that category. Note that the total should take into account the quantity of items bought.
-5. 
+5.  Create a function called `mapReviews` that takes in one parameter - `array` - which represents an array of items like the one shown in data.js. This function should use the native map method to return a new array of subarrays. The subarrays contained in the output array should contain the review text for each item's reviews. Use the example below for reference:
+```javascript
+// example output
+mapReviews(cart);
+/*
+RETURNS =>
+[
+    ['These seem to work okay.', "These didn't work at all!"],
+    ['Some of the cans were dented.', 'The package only had 11 cans.'],
+    ['Really like this soda.', 'Soda was good, but box was damaged.'],
+    ['Very comfortable.', 'Great sound quality for the price!']
+]
+*/
+```
+6. Create a function called `logLastReview` that takes in one parameter - `item` - which represents an array an individual item object. This function should access the last review for that item and log a string to the console that includes the number of stars, the text of the review and the username of the review author. Use the example below for reference.
+```javascript
+// example output
+logLastReview({
+        item: 'Roach traps',
+        quantity: 1,
+        price: 10.49,
+        category: 'Household Supplies',
+        reviews: [
+            {
+                stars: '4',
+                text: 'These seem to work okay.',
+                author: {
+                    username: 'aimee34',
+                    numberOfReviews: 50,
+                }
+            },
+            {
+                stars: '1',
+                text: "These didn't work at all!",
+                author: {
+                    username: 'bjoseph',
+                    numberOfReviews: 8,
+                }
+            }
+        ]
+    });
+/*
+LOGS => 1 star: These didn't work at all! (bjoseph)
+*/
+```

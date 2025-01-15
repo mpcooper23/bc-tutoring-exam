@@ -7,11 +7,19 @@ const cart = [
         reviews: [
             {
                 stars: '4',
-                text: 'These seem to work okay.'
+                text: 'These seem to work okay.',
+                author: {
+                    username: 'aimee34',
+                    numberOfReviews: 50,
+                }
             },
             {
                 stars: '1',
-                text: "These didn't work at all!"
+                text: "These didn't work at all!",
+                author: {
+                    username: 'bjoseph',
+                    numberOfReviews: 8,
+                }
             }
         ]
     },
@@ -23,11 +31,19 @@ const cart = [
         reviews: [
             {
                 stars: '1',
-                text: 'Some of the cans were dented.'
+                text: 'Some of the cans were dented.',
+                author: {
+                    username: 'sray',
+                    numberOfReviews: 12
+                }
             },
             {
                 stars: '2',
-                text: 'The package only had 11 cans.'
+                text: 'The package only had 11 cans.',
+                author: {
+                    username: 'kbradley',
+                    numberOfReviews: 3
+                }
             }
         ]
 
@@ -41,10 +57,18 @@ const cart = [
             {
                 stars: '5',
                 text: 'Really like this soda.',
+                author: {
+                    username: 'stephcoop',
+                    numberOfReviews: 25
+                }
             },
             {
                 stars: '3.5',
-                text: 'Soda was good, but box was damaged.'
+                text: 'Soda was good, but box was damaged.',
+                author: {
+                    username: 'bignick',
+                    numberOfReviews: 15
+                }
             }
         ]
     },
@@ -56,12 +80,20 @@ const cart = [
         reviews: [
             {
                 stars: 5,
-                text: 'Very comfortable.'
+                text: 'Very comfortable.',
+                author: {
+                    username: 'ncoen',
+                    numberOfReviews: 1
+                }
             },
             {
                 stars: 5,
-                text: 'Great sound quality for the price!'
+                text: 'Great sound quality for the price!',
+                author: {
+                    username: 'scoop',
+                    numberOfReviews: 25
+                }
             }
         ]
     }
-]
+];

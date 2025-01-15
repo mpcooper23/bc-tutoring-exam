@@ -94,5 +94,45 @@ describe('BC Tutoring Exam', function(){
         });
     });
 
+    describe("mapReviews()", function(){
+        beforeEach(function () {
+            sinon.spy(Array.prototype, 'map');
+        });
+      
+        afterEach(function () {
+            Array.prototype.map.restore();
+        });
+        it('should return an array', function(){
+            const result = mapReviews(cart);
+            assert.equal(Array.isArray(result), true);
+        });
+        it('should return a correct array of objects', function(){
+            const result = mapReviews(cart);
+            const correct = [
+                ['These seem to work okay.', "These didn't work at all!"],
+                ['Some of the cans were dented.', 'The package only had 11 cans.'],
+                ['Really like this soda.', 'Soda was good, but box was damaged.'],
+                ['Very comfortable.', 'Great sound quality for the price!']
+            ];
+            assert.deepEqual(result, correct);
+        });
+        it('should use the native map method', function(){
+            const result = mapReviews(cart);
+            Array.prototype.map.called.should.be.true;
+        });
+    });
+
+    describe("logLastReview()", function(){
+        it('should return a string', function(){
+            const result = logLastReview(cart[0]);
+            assert.equal(typeof result, 'string')
+        });
+        it('should a correct string of the last review', function(){
+            const result = logLastReview(cart[0]);
+            const correct = "1 star: These didn't work at all! (bjoseph)";
+            assert.equal(result, correct);
+        });
+    });
+
 
 });
