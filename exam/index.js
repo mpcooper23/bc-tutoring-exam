@@ -11,7 +11,7 @@
 function filterByOneStarReviews(array){
     return array.filter(product => {
         return product.reviews.filter(review =>
-           { if(product.reviews >= '1'){
+           { if(review.stars === '1'){
                    return true
     }})
     })
@@ -46,7 +46,8 @@ function logItems(array){
  */
 function getStrings(array){
     return array.map(product => {
-        return `${product.item} - Total Cost: ${product.price}`
+        const totalItems = product.price * product.quantity
+        return `${product.item} - Total cost: ${totalItems}`
     })
 }
 
@@ -59,15 +60,15 @@ function getStrings(array){
  * items bought.
  * 
  */
-function getTotalByCategory(array, category){
-   let sum = 0
+function getTotalByCategory(array, category, output = 0){
+
     //base case
 if (array.length === 0){
-    return sum;
+    return output;
 }
     //recursion
     if(array[0].category = category){
-return sum + 1
+return output + 1
     }
     getTotalByCategory(array.slice(1), category)
 }
