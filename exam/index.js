@@ -40,6 +40,9 @@ function logItems (array) {
  * 
  */
 
+function getStrings (array) {
+   return array.map(product => `${product.item} Total Cost: (${product.price} * ${product.quantity})`)
+}
 
 // Problem #4 //
 /**
