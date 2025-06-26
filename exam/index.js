@@ -8,13 +8,8 @@
  */
  
 
-function filterByOneStarReviews(array){
-    return array.filter(product => {
-        return product.reviews.filter(review =>
-           { if(review.stars === '1'){
-                   return true
-    }})
-    })
+function filterByOneStarReviews (array) {
+ return array.filter(item => item.reviews.stars >= '1')
 }
 
 // Problem #2 //
@@ -27,10 +22,10 @@ function filterByOneStarReviews(array){
  * 
  */
 
-function logItems(array){
+function logItems (array) {
     for (let i = array.length - 1; i > 0; i--){
-        if (array[i].price < 10){
-         console.log(array[i].item + ' ' + '(' + array[i].category + ')')
+        if (array[i].price < 10.00){
+            return `${array[i].item} (${array[i].category})`
         }
     }
 }
@@ -44,12 +39,7 @@ function logItems(array){
  * AND quantity of items bought.
  * 
  */
-function getStrings(array){
-    return array.map(product => {
-        const totalItems = product.price * product.quantity
-        return `${product.item} - Total cost: ${totalItems}`
-    })
-}
+
 
 // Problem #4 //
 /**
@@ -60,18 +50,6 @@ function getStrings(array){
  * items bought.
  * 
  */
-function getTotalByCategory(array, category, output = 0){
-
-    //base case
-if (array.length === 0){
-    return output;
-}
-    //recursion
-    if(array[0].category = category){
-return output + 1
-    }
-    getTotalByCategory(array.slice(1), category)
-}
 
 // Problem #5 //
 /**
@@ -82,16 +60,7 @@ return output + 1
  * The subarrays contained in the output array should contain the review text for 
  * each item's reviews. Use the example below for reference:
  */
-function mapReviews(array){
-    const output = [];
-    return array.map(reviews => {
-        for(let i = 0; i <= reviews.length - 1; i++){
-            output.push(reviews.text)
-        } 
-        return output
-    })
-   
-}
+
 
 // Problem #6 //
 /**
@@ -102,13 +71,7 @@ function mapReviews(array){
  * below for reference.
  * 
  */
-function logLastReview(item){
-    for (let i = 0; i <= item.review.length; i++){
-        if (item.review === item.review.length - 1){
-            console.log(`${item.review.stars} star: ${item.review.text} (${item.review.author.username})`)
-        }
-    }
-   }
+
 
 
 // Problem #7 //
@@ -122,11 +85,6 @@ function logLastReview(item){
  * the array at the end.
  * 
  */
-function updateObjects(array, update, output = []){
-    return array.reduce((acc, current) => {
-update(acc[key] + current[value])
-     return output}, 0)
-   
-}
+
 
 
