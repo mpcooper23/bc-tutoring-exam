@@ -77,6 +77,10 @@ return getTotalByCategory(array.slice(1), sum)
  * each item's reviews. Use the example below for reference:
  */
 
+function mapReviews (array) {
+return array.map(product => product.reviews.forEach(reviews => reviews.text))
+}
+
 
 // Problem #6 //
 /**
@@ -88,7 +92,15 @@ return getTotalByCategory(array.slice(1), sum)
  * 
  */
 
+function logLastReview (item) {
+return item.map(review => {
+    for (let i = 0; i < item.reviews; i++){
+       let lastRev = item.reviews[i][item.reviews - 1]
+       return lastRev;
+    }
 
+})
+}
 
 // Problem #7 //
 /**
@@ -102,5 +114,10 @@ return getTotalByCategory(array.slice(1), sum)
  * 
  */
 
+function updateObjects (array, update) {
+return array.map(product => {
+    product[update]
+})
+}
 
 
