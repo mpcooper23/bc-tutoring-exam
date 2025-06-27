@@ -54,6 +54,19 @@ function getStrings (array) {
  * 
  */
 
+function getTotalByCategory (array, category) {
+    let sum;
+//base case
+if (array.length === 0){
+return sum;
+}
+// recursive case
+if (array[0].category === category){
+return sum += getTotalByCategory(array[0].price)
+}
+return getTotalByCategory(array.slice(1), sum)
+}
+
 // Problem #5 //
 /**
  * 
